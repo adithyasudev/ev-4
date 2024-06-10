@@ -11,7 +11,11 @@ const { log } = require('console');
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
+app.get('/', function (req, res) {
 
+res.send("homepage")
+
+});
 io.on('connection', (socket) => {
     log('Client connected', 'info');
     socket.on('disconnect', () => {
