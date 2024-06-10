@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <h1>Log Dashboard</h1>
+    <div>
+      <label for="filter">Filter logs:</label>
+      <select id="filter">
+        <!-- <option value="all">All</option> -->
+        <option value="info">Info</option>
+        <option value="warn">Warn</option>
+        <option value="error">Error</option>
+        <option value="success">Success</option>
+      </select>
+    </div>
+    <div>
+      <label for="logFile">Upload log file:</label>
+      <!-- Allow uploading TXT, CSV, and JSON files -->
+      <input type="file" id="logFile" accept=".txt,.log,.csv,.json" />
+      <button id="uploadButton">Upload</button>
+    </div>
+    <pre id="logOutput"></pre>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
